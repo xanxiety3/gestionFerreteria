@@ -23,12 +23,24 @@ h2 {
 
 /* Estilo del formulario */
 form {
-    margin: 50px auto;
-    width: 320px;
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+width: 320px;
+
+background-color: #fff;
+
+padding: 30px;
+
+/* border-radius: 15px; */
+
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+height: 262px;
+
+display: flex;
+
+flex-direction: column;
+
+justify-content: center;
 }
 
 /* Estilos de los campos de entrada y botón */
@@ -37,8 +49,7 @@ input[type="password"],
 input[type="submit"] {
     width: 100%;
     padding: 15px;
-    margin-top: 15px;
-    margin-bottom: 15px;
+
     border: 1px solid #ccc;
     border-radius: 8px;
     box-sizing: border-box;
@@ -58,19 +69,11 @@ input[type="submit"]:hover {
     background-color: #0056b3;
 }
 
-.container img {
-    margin-right: 20px; /* Espacio entre la imagen y el texto */
-    max-width: 100px; /* Ancho máximo de la imagen */
-    height: auto; /* Altura automática según el ancho */
-}
-
-.imagen{
-   
-    
-margin-left: -30%;
-
-}
 .cajas{
-margin-left: 30%;
-margin-top: -29%;
+    display: flex;
+}
+
+.padre{
+    display: flex;
+    justify-content: center
 }
