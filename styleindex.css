@@ -1,0 +1,76 @@
+/* Estilo base */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para encabezados */
+h1 {
+    color: #333;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #666;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+/* Estilo del formulario */
+form {
+    margin: 50px auto;
+    width: 320px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos de los campos de entrada y botón */
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+/* Cambio de color al pasar el ratón sobre el botón */
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.container img {
+    margin-right: 20px; /* Espacio entre la imagen y el texto */
+    max-width: 100px; /* Ancho máximo de la imagen */
+    height: auto; /* Altura automática según el ancho */
+}
+
+.imagen{
+   
+    
+margin-left: -30%;
+
+}
+.cajas{
+margin-left: 30%;
+margin-top: -29%;
+}
