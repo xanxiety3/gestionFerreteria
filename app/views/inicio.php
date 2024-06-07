@@ -4,21 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Inicio</title>
-    <link rel="stylesheet" href="stylesinicio.css">
+    <link rel="stylesheet" href="../views/css/stylesinicio.css">
     
 </head>
 <body>
     <div class="container">
         <h1>USTED ESTA REGISTRADO</h1>
         <p>ACÁ DEBERIA IR EL INICIO DE LA FERRETERIA</p>
-        <a href="index.html" class="btn">VOLVER</a>
+        <a href="login.php" class="btn">VOLVER</a>
   
   
-        <div>
-            <h1>USTED ESTÁ REGISTRADO</h1>
-            <p>ACÁ DEBERÍA IR EL INICIO DE LA FERRETERÍA</p>
-            <a href="index.html" class="btn">VOLVER</a>
-        </div>
     </div>
 </body>
 </html>
