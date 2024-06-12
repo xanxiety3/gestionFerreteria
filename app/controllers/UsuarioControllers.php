@@ -28,11 +28,11 @@ class UsuarioController
     public function login()
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            $correo = $_POST['correo'];
-            $contrasena = $_POST['contrasena'];
-            $verificar = $this->model->verificar($correo, $contrasena);
+            $usuario = $_POST['usuario'];
+            $contrasenia = $_POST['contrasenia'];
+            $verificar = $this->model->verificar($usuario, $contrasenia);
             if (count($verificar) > 0) {
-                if (password_verify($_POST["contrasena"], $verificar["contrasena"])) {
+                if (password_verify($_POST["contrasenia"], $verificar["contrasenia"])) {
                     $_SESSION['usuario'] = $verificar;
                     // var_dump($_SESSION['usuario']);
                     // die("KILL");
@@ -42,7 +42,8 @@ class UsuarioController
                     require 'app/views/login.php';
                 }
             } elseif (count($verificar) == 0) {
-                $error = 'Usuario no encontrado <br> Registrate para poder acceder <a href="registrar">Registrarse</a>';
+                $error = 'Usuario no encontrado <br> Registrate para poder acceder <a href="inicio.php">Registrarse</a>';
+
                 require 'app/views/login.php';
             }
         } else {
