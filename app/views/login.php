@@ -4,7 +4,7 @@
 
 <head>
     <title>Iniciar sesión</title>
-    <link rel="stylesheet" href="../views/css/stylesLogin.css">
+    <link rel="stylesheet" href="app/views/css/stylesLogin.css">
 </head>
 
 <body>
@@ -12,11 +12,11 @@
     <h2>INICIA SESION</h2>
     <div class="padre">
         <div class="imagen">
-            <img src="../views/image/logoFerreteria.png" alt="img login">
+            <img src="app/views/image/logoFerreteria.png" alt="img login">
 </div>
 <div class="cajas">
         <form method="POST" action="login">
-            <input type="text" name="usuario" placeholder="Ingrese su usuario" required>
+            <input type="text" name="usuario1" placeholder="Ingrese su usuario" required>
             <br/>
             <input type="password" name="contrasenia" placeholder="Ingrese su contrasenia" required>
             <br/>

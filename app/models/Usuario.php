@@ -32,9 +32,21 @@ class Usuario
      */
     public function verificar($usuario)
     {
-        $stmt = $this->db->prepare("SELECT * FROM ttrabajadores WHERE usuario = ?");
+        $stmt = $this->db->prepare("SELECT * FROM ttrabajadores WHERE usuario = ? ");
         $stmt->execute([$usuario]);
         $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
+     
         return $usuario;
+     
+    }
+
+    public function leerTodas()
+    {
+        $stmt = $this->db->query("SELECT usuario, troles.nombre AS rol, testadousuarios.estadoUs AS estado, tpersonas.nombre 
+        FROM ttrabajadores 
+        inner join troles on troles.ID = ttrabajadores.IDrol
+        inner join testadousuarios on testadousuarios.ID = ttrabajadores.IDestado
+        INNER JOIN tpersonas ON ttrabajadores.IDpersona = tpersonas.ID");
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }
