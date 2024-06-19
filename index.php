@@ -43,6 +43,8 @@ switch ($request) {
         $usuarioController->leer();
         break;
     
+    case 'Ferreteria/editar':
+        $usuarioController->editar();
       
    
     default:

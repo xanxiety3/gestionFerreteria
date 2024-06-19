@@ -1,0 +1,33 @@
+
+         table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        td .btn-group {
+            display: flex;
+        }
+        .btn-group a {
+            display: inline-block;
+            margin-left: 5px;
+            padding: 5px 10px;
+            text-decoration: none;
+            color: #333;
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+        .btn-group a:hover {
+            background-color: #e0e0e0;
+        }

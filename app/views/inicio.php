@@ -4,29 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Inicio</title>
-    <link rel="stylesheet" href="../views/css/stylesinicio.css">
+    <link rel="stylesheet" href="public/css/stylesinicio.css">
     
 </head>
 <body>
 <h1>Lista de Trabajadores</h1>
+    
     <?php if (empty($trabajadores)): ?>
         <p>No hay trabajadores disponibles.</p> <a href="crear">Crear trabajador</a>
     <?php else: ?>
         <table>
-            <!-- <thead>
+            <thead>
                 <tr>
-                    <th>Título</th>
-                    <th>Descripción</th>
+                    <th>Usuario</th>
+                    <th>Rol</th>
+                    <th>Estado</th>
+                    <th>Nombre</th>
+                    <th>Acciones</th>
                 </tr>
-            </thead> -->
+            </thead>
             <tbody>
                 <?php foreach ($trabajadores as $trabajador): ?>
-                    <h2><?= $trabajador['usuario'] ?></h2>
-                    <p><?= $trabajador['rol'] ?></p>
-                    <p><?= $trabajador['estado'] ?></p>
-                    <p><?= $trabajador['nombre'] ?></p>
-                    <!-- <a href="actualizar?id=<?= $trabajador['ID'] ?>">Actualizar</a>
-                    <a href="eliminar?id=<?= $trabajador['ID'] ?>">Eliminar</a> -->
+                    <tr>
+                        <td><?= $trabajador['usuario'] ?></td>
+                        <td><?= $trabajador['rol'] ?></td>
+                        <td><?= $trabajador['estado'] ?></td>
+                        <td><?= $trabajador['nombre'] ?></td>
+                        <td class="btn-group">
+                            <a href="editar"> Actualizar</a>
+                            <a > Eliminar</a>
+                        </td>
+
+                    </tr>
                 <?php endforeach; ?>
             </tbody>
         </table>

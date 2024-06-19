@@ -32,10 +32,9 @@ class Usuario
      */
     public function verificar($usuario)
     {
-        $stmt = $this->db->prepare("SELECT * FROM ttrabajadores WHERE usuario = ? ");
+        $stmt = $this->db->prepare("SELECT usuario, contrasenia FROM ttrabajadores WHERE usuario = ? ");
         $stmt->execute([$usuario]);
-        $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
-     
+        $usuario = $stmt->fetch(PDO::FETCH_ASSOC);   
         return $usuario;
      
     }
@@ -49,4 +48,19 @@ class Usuario
         INNER JOIN tpersonas ON ttrabajadores.IDpersona = tpersonas.ID");
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    
+    /**
+     * Actualiza una tarea existente.
+     * 
+     * @param int $id El ID de la tarea a actualizar.
+     * @param string $usuario El nuevo título de la tarea.
+     * @param string $rol La nueva descripción de la tarea.
+     * @return void
+     */
+    public function actualizar($id, $titulo, $descripcion)
+    {
+        # code...
+    }
+
 }
